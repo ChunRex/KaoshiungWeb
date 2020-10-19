@@ -1,0 +1,294 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*  CSS語法區  */
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "微軟正黑體";
+}
+
+.wrap{
+	margin: 0 auto;
+	width: 1024px;
+}
+
+.header{  /* 主要設定背景圖片寬高及置中 */
+	background-image: url(../img/background.png);
+	background-repeat: no-repeat;
+	background-size: 1024px 380px;
+	height: 500px;
+	text-align: center;
+	background-color: #FCFCFC;
+}
+
+.header h1{  /* 高雄旅遊資訊格式 */
+	color: white;
+	font-size: 36px;
+	padding: 80px 0;
+}
+
+.header .hotzone{ /* 熱門行政區格式,用相對位置才能覆蓋在圖片上 */
+	width: 800px;
+	height: 110px;
+	margin: 0 auto;
+	padding: 20px 0 0 20px;
+	color: black;  /* 吃掉前面白色字體 */
+	background-color: white;
+	text-align: left; /* 吃掉前面文字置中 */
+	font-size: 18px;
+	font-weight: bold;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+	border-radius: 5px;
+}
+
+/* 四個熱門行政區字型設置開始 */
+
+.hotzone .zone1{
+	font-size: 18px;
+	margin: 15px 35px;
+	padding: 8px 30px;
+	border-radius: 5px;
+	border: 0px;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	background: #CA8EFF;
+	transition: background-color 0.3s linear;	
+}
+
+.hotzone .zone1:hover{
+	background: #BE77FF;
+}
+
+.hotzone .zone2{
+	font-size: 18px;
+	margin: 15px 35px;
+	padding: 8px 30px;
+	border-radius: 5px;
+	border: 0px;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	background: #FFA042;	
+	transition: background-color 0.3s linear;	
+}
+
+.hotzone .zone2:hover{
+	background: #FF9224;
+}
+
+.hotzone .zone3{
+	font-size: 18px;
+	margin: 15px 35px;
+	padding: 8px 30px;
+	border-radius: 5px;
+	border: 0px;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	background: #EAC100;
+	transition: background-color 0.3s linear;	
+}
+
+.hotzone .zone3:hover{
+	background: #D9B300;
+}
+
+.hotzone .zone4{
+	font-size: 18px;
+	margin: 15px 35px;
+	padding: 8px 30px;
+	border-radius: 5px;
+	border: 0px;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	background: #46A3FF;	
+	transition: background-color 0.3s linear;	
+}
+
+.hotzone .zone4:hover{
+	background:	#2894FF;
+}
+
+/* 四個熱門行政區字型設置結束 */
+
+#list{ /* 選單介面,下標小箭頭圖片設置 */
+	appearance:none;   /* 隱藏原本的箭頭 */
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	background: url("../img/icons_down.png");  /* 插入我們想設置的箭頭圖片 */
+	background-repeat: no-repeat;
+	background-position: center right 15px;
+	width:452px;  /* 配合教學網設置基本版型 */
+	height:48px;
+	padding-left:5px;
+	padding-right:40px;
+	margin-bottom: 80px;
+	background-color: rgba(255,255,255,0.70); /* 透明度設置 */
+	font-weight: bold;
+	font-size: 16px;
+	border: 3px solid #FFFFFF;
+	border-radius: 3px;
+}
+
+.medium{
+	background-color: #FCFCFC;
+}
+
+.line{
+	height: 1px;
+    background: linear-gradient(to right, #627bdf, #627bdf 4.5px, transparent 4.5px, transparent);
+	background-size: 9px 100%;
+}
+
+.menu{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.zone{
+	font-size: 36px;
+	color: #8A82CC;
+	text-align: center;
+	padding: 40px 0;
+	font-weight: bold;
+}
+/*	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;*/
+
+.footer{ 
+	background-color: #559AC8;
+	height: 90px;
+	text-align: center;
+}
+
+.footer p:nth-child(1){  /* 高雄旅遊網 */
+	color: #FFFFFF;
+	font-size: 14px;
+	padding-top: 30px;
+}
+
+.footer p:nth-child(2){ /* 資料來源 */
+	color: #FFD366;
+	font-size: 14px;
+	padding-top: 15px;
+}
+
+/* Menu資料格式統整，上欄 */
+
+.dataWrap{
+	width: 464px;
+	margin: 20px 24px;
+	background: #FFFFFF;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+}
+
+.dataWrap:hover{
+	box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);
+}
+
+.dataPicture{
+	height: 155px;
+	background-size:464px 155px;
+	background-repeat:no-repeat;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.dataName{
+	font-size: 24px;
+	color: white;
+	padding: 0 0 20px 20px;
+}
+
+.dataZone{
+	font-size: 16px;
+	color: white;
+	padding: 0 15px 20px 0;
+}
+
+/* Menu資料格式統整，下欄 */
+
+.dataInformation{
+	padding: 20px 20px 10px 20px;
+}
+
+.dataOpentime{
+	text-indent : -2em;
+	line-height: 24px;
+	padding-left: 30px;
+}
+
+.dataImg{
+	padding-right: 15px;
+}
+
+.dataAdd{
+	margin: 10px 0;
+	text-indent : -2em;
+	line-height: 24px;
+	padding-left: 30px;
+}
+
+.dataImgTel{
+	padding-right: 18px;
+	padding-left: 2px ;
+}
+
+.dataPrice{
+	margin-left: 280px;
+}
+
